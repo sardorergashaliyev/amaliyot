@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const Second());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Second extends StatelessWidget {
+  const Second({super.key});
 
   // This widget is the root of your application.
   @override
@@ -16,68 +16,56 @@ class MyApp extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                margin: const EdgeInsets.only(top: 200),
-                child: const Text(
-                  'boniad',
-                  style: TextStyle(
-                      color: Colors.white,
-                      decoration: TextDecoration.none,
-                      fontFamily: 'Orange'),
-                ),
-              ),
-              Container(
+                height: 100,
+                width: 100,
+                decoration: const BoxDecoration(
+                    color: Color.fromARGB(223, 32, 205, 136),
+                    shape: BoxShape.circle),
                 margin: const EdgeInsets.only(top: 100),
-                child: const Text(
-                  'User name',
-                  style: TextStyle(
-                      color: Colors.white,
-                      decoration: TextDecoration.none,
-                      fontSize: 20),
-                ),
               ),
-              Container(
-                height: 1,
-                width: 300,
-                color: Colors.white,
-                margin: const EdgeInsets.only(top: 0),
-              ),
-              Container(
-                margin: const EdgeInsets.only(top: 100),
-                child: const Text(
-                  'Password',
-                  style: TextStyle(
-                      color: Colors.white,
-                      decoration: TextDecoration.none,
-                      fontSize: 20),
-                ),
-              ),
-              Container(
-                height: 1,
-                width: 300,
-                color: Colors.white,
-                margin: const EdgeInsets.only(top: 0),
-              ),
-              Container(
-                height: 70,
-                width: 250,
-                margin: const EdgeInsets.only(top: 50),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: const Color.fromARGB(255, 0, 83, 151),
-                ),
-                child: Column(
-                  children: const [
-                    Text(
-                      '''
-                      Kirish''',
+              Row(
+                children: [
+                  Container(
+                    height: 1,
+                    width: 100,
+                    color: Colors.white,
+                    margin: const EdgeInsets.only(top: 50, right: 0, left: 20),
+                  ),
+                  Container(
+                    height: 50,
+                    width: 150,
+                    decoration: const BoxDecoration(
+                      color: Color.fromARGB(0, 0, 0, 0),
+                    ),
+                    margin: const EdgeInsets.only(top: 20),
+                    child: const Text(
+                      '''SIGN IN''',
                       style: TextStyle(
                         color: Colors.white,
                         decoration: TextDecoration.none,
-                        fontSize: 20,
+                        fontSize: 35,
                       ),
                       textAlign: TextAlign.center,
                     ),
-                  ],
+                  ),
+                  Container(
+                    height: 1,
+                    width: 100,
+                    color: Colors.white,
+                    margin: const EdgeInsets.only(top: 50, right: 0),
+                  ),
+                ],
+              ),
+              Container(
+                height: 50,
+                width: 300,
+                margin: const EdgeInsets.only(top: 50),
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(20),
+                    
+                  ),
+                  color: Colors.black,
                 ),
               ),
             ],
